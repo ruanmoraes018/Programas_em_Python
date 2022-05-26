@@ -1,0 +1,28 @@
+nome = []
+altura = []
+media = 0
+
+nomeMaior = ''
+alturaMaior = 0; quantN = 0
+
+nmaiorMedia = []; amaiorMedia = []
+for i in range(0, 4):
+  nome.append(str(input('Informe o nome: ')))
+  altura.append(float(input('Informe a altura do jogador: ')))
+  if altura[i] > alturaMaior:
+    alturaMaior = altura[i]
+    nomeMaior = nome[i]
+media = sum(altura) / len(altura)
+
+for j in range(0, 4):
+  if altura[j] > media:
+    quantN += 1
+    nmaiorMedia.append(nome[j])
+    amaiorMedia.append(altura[j])
+print(nome)
+print(nomeMaior)
+print(alturaMaior)
+print(f'Média: {media:,.2f}')
+print(quantN)
+print(nmaiorMedia)
+print(amaiorMedia)
